@@ -1,0 +1,219 @@
+# RAG KNOWLEDGE BASE: TOOL SYNTAX EXAMPLES
+# These examples help the Executor Agent use tools with correct syntax
+
+================================================================================
+TOOL: web_search
+================================================================================
+PURPOSE: Find factual information, current events, definitions, or general knowledge
+
+PARAMETERS:
+  - query: str - The search query to send to the web search engine
+
+EXAMPLES:
+
+1. Factual lookup (Who)
+   <THOUGHT>I need to find the name of the current CEO of Google.</THOUGHT>
+   <ACTION>web_search('current CEO of Google')</ACTION>
+   USE WHEN: Finding names of people, roles, or specific entities
+
+2. Definition lookup (What)
+   <THOUGHT>The user wants to know the definition of 'Operations Research'.</THOUGHT>
+   <ACTION>web_search('what is Operations Research')</ACTION>
+   USE WHEN: Defining terms, concepts, or acronyms
+
+3. Date/Event lookup (When)
+   <THOUGHT>I need to find the release date of the movie 'Inception'.</THOUGHT>
+   <ACTION>web_search('Inception movie release date')</ACTION>
+   USE WHEN: Finding dates, historical events, timelines
+
+4. Current Events
+   <THOUGHT>The user is asking for the weather in London. This is real-time data.</THOUGHT>
+   <ACTION>web_search('weather in London')</ACTION>
+   USE WHEN: Current events, news, weather, or any information that changes
+
+5. General Knowledge
+   <THOUGHT>I need to find the main ingredients for making guacamole.</THOUGHT>
+   <ACTION>web_search('main ingredients for guacamole')</ACTION>
+   USE WHEN: General questions, recipes, lists, etc.
+
+================================================================================
+TOOL: calculator
+================================================================================
+PURPOSE: Perform basic arithmetic operations
+
+PARAMETERS:
+  - operation: str - One of 'add', 'subtract', 'multiply', 'divide', 'percentage', 'ratio'
+  - operands: list - Numbers to operate on
+
+EXAMPLES:
+
+1. Addition (sum multiple values)
+   <THOUGHT>I need to add 2.5, 3.5, and 1.0 to get the total time.</THOUGHT>
+   <ACTION>calculator(operation='add', operands=[2.5, 3.5, 1.0])</ACTION>
+   USE WHEN: Summing costs, times, quantities
+
+2. Subtraction
+   <THOUGHT>Calculate the difference between 10 and 3.</THOUGHT>
+   <ACTION>calculator(operation='subtract', operands=[10, 3])</ACTION>
+   USE WHEN: Finding differences, remaining amounts
+
+3. Multiplication
+   <THOUGHT>Calculate total cost: 5 items at $3 each.</THOUGHT>
+   <ACTION>calculator(operation='multiply', operands=[5, 3])</ACTION>
+   USE WHEN: Scaling, repeated addition, area calculations
+
+4. Division
+   <THOUGHT>Find rate: 100 units in 5 hours.</THOUGHT>
+   <ACTION>calculator(operation='divide', operands=[100, 5])</ACTION>
+   USE WHEN: Rates, averages, per-unit calculations
+
+5. Percentage
+   <THOUGHT>Calculate 25% of 200.</THOUGHT>
+   <ACTION>calculator(operation='percentage', operands=[25, 200])</ACTION>
+   USE WHEN: Computing percentages, discounts
+
+6. Ratio
+   <THOUGHT>Find ratio of 12 to 8.</THOUGHT>
+   <ACTION>calculator(operation='ratio', operands=[12, 8])</ACTION>
+   USE WHEN: Simplifying ratios, proportions
+
+================================================================================
+TOOL: sympy_solver
+================================================================================
+PURPOSE: Solve algebraic equations, systems of equations, symbolic mathematics
+
+PARAMETERS:
+  - equations: list[str] - Equations to solve (use string format)
+  - variables: list[str] - Variables to solve for
+
+EXAMPLES:
+
+1. Single equation
+   <THOUGHT>Solve x + 5 = 10 for x.</THOUGHT>
+   <ACTION>sympy_solver(equations=['x + 5 - 10'], variables=['x'])</ACTION>
+   USE WHEN: Simple algebraic equations
+
+2. System of linear equations
+   <THOUGHT>Solve x + y = 10 and x - y = 2 simultaneously.</THOUGHT>
+   <ACTION>sympy_solver(equations=['x + y - 10', 'x - y - 2'], variables=['x', 'y'])</ACTION>
+   USE WHEN: Multiple unknowns with multiple constraints
+
+3. Quadratic equation
+   <THOUGHT>Solve 2*x**2 - 8 = 0 for x.</THOUGHT>
+   <ACTION>sympy_solver(equations=['2*x**2 - 8'], variables=['x'])</ACTION>
+   USE WHEN: Polynomial equations, parabolic motion
+
+4. System with multiplication
+   <THOUGHT>Two numbers multiply to 12 and add to 7.</THOUGHT>
+   <ACTION>sympy_solver(equations=['a*b - 12', 'a + b - 7'], variables=['a', 'b'])</ACTION>
+   USE WHEN: Product and sum constraints
+
+5. Geometric problems
+   <THOUGHT>Distance formula: sqrt((x-3)**2 + (y-4)**2) = 5.</THOUGHT>
+   <ACTION>sympy_solver(equations=['(x-3)**2 + (y-4)**2 - 25'], variables=['x', 'y'])</ACTION>
+   USE WHEN: Distance, circles, geometric constraints
+
+================================================================================
+TOOL: z3_solver
+================================================================================
+PURPOSE: Constraint satisfaction, logical reasoning, Boolean satisfiability
+
+PARAMETERS:
+  - constraints: list[str] - Logical constraints (use ==, >, <, !=, and, or, not)
+  - variables: list[str] - Variables involved
+  - variable_types: str - 'int', 'real', or 'bool'
+
+EXAMPLES:
+
+1. Integer constraints
+   <THOUGHT>Find integers where x + y = 10, x > y, and x < 8.</THOUGHT>
+   <ACTION>z3_solver(constraints=['x + y == 10', 'x > y', 'x < 8'], variables=['x', 'y'], variable_types='int')</ACTION>
+   USE WHEN: Integer puzzles with multiple conditions
+
+2. Boolean logic
+   <THOUGHT>Solve: a OR b is true, but NOT (a AND b).</THOUGHT>
+   <ACTION>z3_solver(constraints=['Or(a, b)', 'Not(And(a, b))'], variables=['a', 'b'], variable_types='bool')</ACTION>
+   USE WHEN: Logic puzzles, truth tables
+
+3. Inequality constraints
+   <THOUGHT>Find values where 2*x + 3*y <= 20, x >= 0, y >= 0.</THOUGHT>
+   <ACTION>z3_solver(constraints=['2*x + 3*y <= 20', 'x >= 0', 'y >= 0'], variables=['x', 'y'], variable_types='real')</ACTION>
+   USE WHEN: Feasibility checking, constraint satisfaction
+
+4. Logical traps
+   <THOUGHT>If statement A implies NOT statement B, and B is true, what is A?</THOUGHT>
+   <ACTION>z3_solver(constraints=['Implies(a, Not(b))', 'b == True'], variables=['a', 'b'], variable_types='bool')</ACTION>
+   USE WHEN: Logical consistency, implication problems
+
+================================================================================
+TOOL: pulp_solver
+================================================================================
+PURPOSE: Linear programming, optimization (maximize/minimize objectives)
+
+PARAMETERS:
+  - objective: str - Function to optimize (use variable names)
+  - constraints: list[str] - Linear constraints
+  - variables: list[str] - Decision variables
+  - optimization_type: str - 'maximize' or 'minimize'
+
+EXAMPLES:
+
+1. Maximize profit
+   <THOUGHT>Maximize 2*x + 3*y subject to x + y <= 10.</THOUGHT>
+   <ACTION>pulp_solver(objective='2*x + 3*y', constraints=['x + y <= 10', 'x >= 0', 'y >= 0'], variables=['x', 'y'], optimization_type='maximize')</ACTION>
+   USE WHEN: Profit maximization, resource allocation
+
+2. Minimize cost
+   <THOUGHT>Minimize cost_a + cost_b with constraints.</THOUGHT>
+   <ACTION>pulp_solver(objective='cost_a + cost_b', constraints=['cost_a >= 5', 'cost_b >= 3', 'cost_a + cost_b >= 10'], variables=['cost_a', 'cost_b'], optimization_type='minimize')</ACTION>
+   USE WHEN: Cost minimization, efficiency problems
+
+3. Production planning
+   <THOUGHT>Maximize 10*product_a + 15*product_b subject to capacity.</THOUGHT>
+   <ACTION>pulp_solver(objective='10*product_a + 15*product_b', constraints=['product_a + product_b <= 100', '2*product_a + product_b <= 150'], variables=['product_a', 'product_b'], optimization_type='maximize')</ACTION>
+   USE WHEN: Production optimization, scheduling
+
+4. Diet problem
+   <THOUGHT>Minimize cost while meeting nutritional requirements.</THOUGHT>
+   <ACTION>pulp_solver(objective='2*food_a + 3*food_b', constraints=['5*food_a + 10*food_b >= 50', 'food_a >= 0', 'food_b >= 0'], variables=['food_a', 'food_b'], optimization_type='minimize')</ACTION>
+   USE WHEN: Meeting requirements at minimum cost
+
+================================================================================
+TOOL SELECTION GUIDELINES
+================================================================================
+
+USE web_search WHEN:
+  ✓ Factual lookups (who, what, when, where)
+  ✓ Definitions, current events, weather
+  ✓ General knowledge questions
+  ✗ DO NOT use for math
+
+USE calculator WHEN:
+  ✓ Simple arithmetic (add, subtract, multiply, divide)
+  ✓ Percentages and ratios
+  ✓ No unknowns to solve for
+
+USE sympy_solver WHEN:
+  ✓ Solving for unknown variables
+  ✓ Algebraic equations (linear, quadratic, polynomial)
+  ✓ Systems of equations
+  ✓ Geometric calculations with equations
+
+USE z3_solver WHEN:
+  ✓ Logical reasoning (AND, OR, NOT, IMPLIES)
+  ✓ Constraint satisfaction with inequalities
+  ✓ Boolean satisfiability
+  ✓ Integer or real constraints with multiple conditions
+
+USE pulp_solver WHEN:
+  ✓ Optimization problems (maximize/minimize)
+  ✓ Linear programming
+  ✓ Resource allocation with constraints
+  ✓ Finding optimal values subject to limits
+
+COMMON PATTERNS:
+  • Start with simpler tools (web_search, calculator) when possible
+  • Use sympy_solver for equations with unknowns
+  • Use z3_solver for logic puzzles and complex constraints
+  • Use pulp_solver for optimization objectives
+  • Can chain tools: web_search → sympy → calculator

@@ -1,0 +1,303 @@
+# RAG KNOWLEDGE BASE: PROBLEM DECOMPOSITION EXAMPLES
+# These examples help the Planner Agent learn decomposition patterns
+
+---
+CATEGORY: Optimization of actions and planning
+
+PROBLEM: You have 3 tasks to complete today and each task will occur only at a specific time. Task A happens at 9:00 am and takes 30 minutes to complete. Task B starts at 9:45 am and takes 15 minutes. Task C cannot start before 10:00 am and will take 30 minutes to complete. You must finish all tasks by 10:30 am today to succeed. Can you create an optimized plan to finish all tasks and what is the order?
+
+DECOMPOSITION PLAN:
+  • Step 1: Identify all tasks and their respective times and durations
+  • Step 2: Determine the earliest possible start time for each task
+  • Step 3: Plan the sequence of tasks to ensure they fit within the given timeframe
+  • Step 4: Confirm that all tasks can be completed by 10:30 am
+  • Step 5: List the tasks in the order they should be performed
+
+KEY PATTERN: Optimization of actions and planning problems typically require identifying constraints, finding optimal sequences, and verifying feasibility.
+
+---
+CATEGORY: Optimization of actions and planning
+
+PROBLEM: Maria needs to prepare for a party and has limited time. She has to bake a cake that takes 1 hour to prepare and bake, decorate her living room which takes 1.5 hours, and pick up a friend from the airport which is 30 minutes away. Maria can decorate the living room while the cake is baking but she cannot leave for the airport if the cake is still in the oven. What is the most efficient sequence of actions for Maria to finish all tasks and what is the minimum total time needed if she starts at 1 PM and must finish all tasks by 4 PM?
+
+DECOMPOSITION PLAN:
+  • Step 1: Start baking the cake at 1 PM
+  • Step 2: Begin decorating the living room once the cake is in the oven
+  • Step 3: Finish baking and decorating the cake by 2 PM
+  • Step 4: Pick up the friend from the airport immediately after finishing decorating
+  • Step 5: Ensure all tasks are completed by 4 PM
+
+KEY PATTERN: Optimization of actions and planning problems typically require identifying constraints, finding optimal sequences, and verifying feasibility.
+
+---
+CATEGORY: Optimization of actions and planning
+
+PROBLEM: You have a to-do list with 4 tasks that you need to complete today. Task 1 will take 1 hour to complete, Task 2 will take 3 hours, Task 3 will take 4 hours, and Task 4 will take 2 hours. The tasks can be completed in any order. Your goal is to organize the tasks and complete them in the shortest time possible, considering the following constraints: a) After completing Task 2, you must take a break of at least 1 hour before starting the next task. b) Task 4 is dependent on the completion of Task 1, so it cannot be started until after Task 1 is finished. What is the shortest time in which you can complete all tasks, including the break after Task 2?
+
+DECOMPOSITION PLAN:
+  • Step 1: Identify all tasks and their durations
+  • Step 2: Determine dependencies and constraints
+  • Step 3: Plan the order of tasks considering dependencies and constraints
+  • Step 4: Calculate the total time including breaks
+  • Step 5: Verify the plan meets all constraints
+
+KEY PATTERN: Optimization of actions and planning problems typically require identifying constraints, finding optimal sequences, and verifying feasibility.
+
+---
+CATEGORY: Spatial reasoning
+
+PROBLEM: Imagine a cube that has six faces, each painted with a different color: Red, Blue, Green, Yellow, Purple, and Orange. You place the cube in a box that has a color painted on each of its six interior sides, matching the colors on the cube. The cube is dropped in and lands with the Red face upwards and the Green face to the North side of the box. Knowing that opposite faces of both the cube and the box have complementary colors (colors that are not next to each other in a standard color wheel), which color is on the bottom face of the cube?
+
+DECOMPOSITION PLAN:
+  • Step 1: Identify the complementary colors for Red and Green
+  • Step 2: Determine the complementary color for Red
+  • Step 3: Determine the complementary color for Green
+  • Step 4: Establish the orientation of the cube in the box
+  • Step 5: Identify the color on the bottom face of the cube
+
+KEY PATTERN: Spatial reasoning problems typically require visualizing spatial relationships, applying geometric principles, and reasoning about positions.
+
+---
+CATEGORY: Spatial reasoning
+
+PROBLEM: You are given a cube where each side measures 2 meters. Inside this cube, there is a smaller cube attached to one of the corners, such that it shares one vertex with the larger cube. The sides of the smaller cube measure precisely half the length of the larger cube's sides. If you were to draw the longest possible straight line inside the large cube that touches any point of the small cube and ends at the furthest point of the larger cube, how long would that line be?
+
+DECOMPOSITION PLAN:
+  • Step 1: Identify the dimensions of both cubes
+  • Step 2: Determine the position of the smaller cube relative to the larger cube
+  • Step 3: Calculate the distance from the farthest corner of the larger cube to the nearest corner of the smaller cube
+  • Step 4: Add the side length of the smaller cube to the calculated distance
+  • Step 5: Conclude the length of the longest possible straight line
+
+KEY PATTERN: Spatial reasoning problems typically require visualizing spatial relationships, applying geometric principles, and reasoning about positions.
+
+---
+CATEGORY: Spatial reasoning
+
+PROBLEM: A jar contains a mixture of black and white marbles. The probability of pulling out a black marble is 1/3. If there are 6 more white marbles than black marbles, how many marbles are there in total?
+
+DECOMPOSITION PLAN:
+  • Step 1: Define the number of black marbles as B and the number of white marbles as W
+  • Step 2: Use the given probability to set up the equation B / (B + W) = 1/3
+  • Step 3: Use the given difference between white and black marbles to set up the equation W = B + 6
+  • Step 4: Solve the system of equations to find the values of B and W
+  • Step 5: Calculate the total number of marbles by adding B and W
+
+KEY PATTERN: Spatial reasoning problems typically require visualizing spatial relationships, applying geometric principles, and reasoning about positions.
+
+---
+CATEGORY: Operation of mechanisms
+
+PROBLEM: In a factory, there are three machines A, B, and C. Machine A can complete a job in 6 hours, machine B in 3 hours, and machine C doubles the speed of any machine it works with. On one particular day, machines A and C work together for the first hour, after which machine C breaks down. Machine B joins in for the rest of the job. How many hours in total did it take to complete the job?
+
+DECOMPOSITION PLAN:
+  • Step 1: Determine the individual rates of machines A and B
+  • Step 2: Calculate the combined rate of machines A and C for the first hour
+  • Step 3: Calculate the remaining work after the first hour
+  • Step 4: Determine the rate of machine B
+  • Step 5: Calculate the time taken by machine B to complete the remaining work
+  • Step 6: Sum up the total time taken
+
+KEY PATTERN: Operation of mechanisms problems typically require careful analysis and systematic reasoning.
+
+---
+CATEGORY: Operation of mechanisms
+
+PROBLEM: In an old castle, there's a room with three identical-looking doors, all next to each other. One door leads to a treasure room, the second door leads to a dragon's lair, and the third door leads to a bottomless pit. Each door is operated by a unique mechanism: One door opens by pushing a button, another by turning a lever, and the third by sliding a panel. There's an engraving on the wall that states: 'The path of riches does not require strength, the dragon detests deceptive appearances, and falling is a silent affair.' Assuming each mechanism's operation is consistent with the clue provided, which mechanism opens which door?
+
+DECOMPOSITION PLAN:
+  • Step 1: Identify the clues from the engraving
+  • Step 2: Determine the mechanism for the treasure room
+  • Step 3: Determine the mechanism for the dragon's lair
+  • Step 4: Determine the mechanism for the bottomless pit
+  • Step 5: Confirm the solution matches all clues
+
+KEY PATTERN: Operation of mechanisms problems typically require careful analysis and systematic reasoning.
+
+---
+CATEGORY: Operation of mechanisms
+
+PROBLEM: In a room, there are three machines controlled by three switches outside the room. Each switch corresponds to one machine. However, it's unknown which switch controls which machine. You can only enter the room once after flipping the switches any number of times. The machines do not start up immediately and there is no way to identify from sounds or vibrations which switch corresponds to which machine. How do you identify which switch controls each machine with just one entry into the room?
+
+DECOMPOSITION PLAN:
+  • Step 1: Turn on the first switch and wait for at least a few minutes.
+  • Step 2: Turn off the first switch and immediately turn on the second switch.
+  • Step 3: Enter the room and identify the machine that is currently on; this machine is controlled by the second switch.
+  • Step 4: Identify the machine that is off but still warm; this machine is controlled by the first switch.
+  • Step 5: The remaining machine is controlled by the third switch.
+  • Step 6: Verify by checking the state of each machine and corresponding switch.
+
+KEY PATTERN: Operation of mechanisms problems typically require careful analysis and systematic reasoning.
+
+---
+CATEGORY: Classic riddles
+
+PROBLEM: A secretive organization communicates with its agents using a riddle to confirm their identities. The riddle is as follows: 'I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?'. An agent is to respond with a one-word answer that represents an element required for the organization's secret communication. What should the agent's answer be?
+
+DECOMPOSITION PLAN:
+  • Step 1: Understand the riddle by identifying key phrases
+  • Step 2: Relate the phrases to common objects or concepts
+  • Step 3: Consider the context of secret communication
+  • Step 4: Identify the most fitting one-word answer related to secret communication
+  • Step 5: Confirm the answer fits all parts of the riddle
+
+KEY PATTERN: Classic riddles problems typically require careful analysis and systematic reasoning.
+
+---
+CATEGORY: Classic riddles
+
+PROBLEM: You come across two doors, one leads to the City of Truth, where inhabitants always tell the truth, and the other to the City of Lies, where inhabitants always lie. Each door is guarded by a sentinel. You can ask one sentinel one question to determine which door leads to the City of Truth. However, you don't know which sentinel is guarding which door. What question can you ask to find the right door?
+
+DECOMPOSITION PLAN:
+  • Step 1: Identify that you can ask only one question to either sentinel
+  • Step 2: Formulate a question that would give the same answer regardless of whether the sentinel is from the City of Truth or the City of Lies
+  • Step 3: Ask the sentinel 'If I were to ask the other sentinel which door leads to the City of Truth, what would they say? '
+  • Step 4: If the sentinel from the City of Truth is asked, they will truthfully report what the liar would say (thus pointing to the wrong door)
+  • Step 5: If the sentinel from the City of Lies is asked, they will lie about what the truth-teller would say (thus also pointing to the wrong door)
+  • Step 6: Choose the opposite door of the one indicated by the sentinel
+
+KEY PATTERN: Classic riddles problems typically require careful analysis and systematic reasoning.
+
+---
+CATEGORY: Classic riddles
+
+PROBLEM: You are in a dark room where there are 100 coins scattered around on the floor. You know that 90 coins are tails up, and 10 are heads up. You need to split the coins into two piles such that there are an equal number of heads in each pile. You cannot see if a coin is heads or tails. How do you do it?
+
+DECOMPOSITION PLAN:
+  • Step 1: Pick any 10 coins and set them aside in a separate pile.
+  • Step 2: Flip all the coins in the second pile.
+  • Step 3: There will now be either 0, 1, 2, ..., or 10 heads in the second pile, depending on how many heads were in the original 10 coins.
+  • Step 4: The first pile will then have the remaining 90 coins, and the number of heads in this pile will be the complement of the number of heads in the second pile.
+  • Step 5: Since the total number of heads is 10, the two piles will now have an equal number of heads.
+
+KEY PATTERN: Classic riddles problems typically require careful analysis and systematic reasoning.
+
+---
+CATEGORY: Sequence solving
+
+PROBLEM: Imagine a sequence that begins with the numbers 1, 11, 21, 1211, 111221. Each subsequent number is described by vocalizing the digits of the previous one. For example, the second number '11' is read as 'one one', which describes the first number, which is a single '1'. Similarly, the next number '21' is read as 'two ones'. What is the sixth number in the sequence?
+
+DECOMPOSITION PLAN:
+  • Step 1: Identify the starting sequence
+  • Step 2: Describe each number in the sequence by counting consecutive digits
+  • Step 3: Write down the description as the next number in the sequence
+  • Step 4: Repeat the process until the sixth number is reached
+  • Step 5: Verify the sequence by checking each step
+
+KEY PATTERN: Sequence solving problems typically require identifying patterns, formulating rules, and applying them to find missing elements.
+
+---
+CATEGORY: Sequence solving
+
+PROBLEM: Imagine you come across an ancient door with a numerical lock that consists of a sequence of numbers followed by a question mark. The sequence is as follows: 2, 6, 14, 30, ?, with the instruction that only those who enter the correct number that belongs where the question mark is can pass through. What number should you enter to unlock the door?
+
+DECOMPOSITION PLAN:
+  • Step 1: Observe the pattern in the given sequence
+  • Step 2: Calculate the difference between consecutive numbers
+  • Step 3: Identify the pattern in these differences
+  • Step 4: Use the identified pattern to find the next number in the sequence
+  • Step 5: Verify the correctness of the found number
+
+KEY PATTERN: Sequence solving problems typically require identifying patterns, formulating rules, and applying them to find missing elements.
+
+---
+CATEGORY: Sequence solving
+
+PROBLEM: In a special sequence, each number is generated by the total number of letters when spelling the previous number in English. If the sequence begins with the number 4, what is the fifth number in the sequence?
+
+DECOMPOSITION PLAN:
+  • Step 1: Start with the number 4
+  • Step 2: Spell out the number 4 in English (four) and count the letters (4 letters)
+  • Step 3: Use the letter count to determine the next number in the sequence (4)
+  • Step 4: Repeat the process for the new number (four -> 4 letters -> 4)
+  • Step 5: Continue this process until you have determined the fifth number in the sequence
+
+KEY PATTERN: Sequence solving problems typically require identifying patterns, formulating rules, and applying them to find missing elements.
+
+---
+CATEGORY: Lateral thinking
+
+PROBLEM: Laura, Marcus, and Nora have been captured by a notorious pirate, who has decided to give them a chance for freedom. The pirate blindfolds them and tells them that he will place a hat on each of their heads. Each hat is either black or white, and there are at least two hats of each color. They will stand in a line, one behind the other, facing forward, so that Laura can see both Marcus and Nora, Marcus can only see Nora, and Nora can't see anyone. When the blindfolds are removed, they can't speak to or signal each other, and they can't look at their own hats. They must guess the color of their own hat starting with Laura, then Marcus, and then Nora. If at least one of them guesses correctly, they will all go free. The pirate also tells them that he will place the hats while they are still blindfolded and that they will have some time to strategize before he does so. What strategy should they use to maximize their chances of freedom?
+
+DECOMPOSITION PLAN:
+  • Step 1: Agree on a strategy before the hats are placed
+  • Step 2: Laura will count the number of black hats she sees
+  • Step 3: If Laura sees two black hats, she will guess that her hat is white
+  • Step 4: If Laura sees one black hat, she will remain silent
+  • Step 5: Marcus will then guess his hat color based on Laura's action
+  • Step 6: If Laura was silent, Marcus knows his hat is black; if Laura guessed, Marcus will guess the opposite color of what Laura saw
+
+KEY PATTERN: Lateral thinking problems typically require questioning assumptions, considering alternative interpretations, and creative problem-solving.
+
+---
+CATEGORY: Lateral thinking
+
+PROBLEM: Eva, Bruno, Clara, and David are standing in a circle, facing the center. They are positioned in that order clock-wise. They each have a hat on their head which could be either white or black, but they cannot see their own hat. They know that there are two hats of each color. They can see the hats of the two people beside them but not the person directly across. There are no reflections or ways to see their own hat or the hat across. Starting with Eva and going clock-wise, they will each guess their hat color or pass. The rules are such that at least one person has to guess, and you win only by guessing correctly. Assuming they all make the most logical decision, what should the first person do to maximize the chance for the group to win?
+
+DECOMPOSITION PLAN:
+  • Step 1: Eva looks at Bruno's and Clara's hats.
+  • Step 2: If both hats are the same color, Eva passes.
+  • Step 3: If the hats are different colors, Eva guesses the opposite color of the hat she sees on Bruno.
+  • Step 4: Bruno and Clara use the information from Eva's action to deduce their own hat colors.
+  • Step 5: Clara looks at David's and Bruno's hats and follows the same logic as Eva.
+  • Step 6: David, knowing the previous actions, can now deduce his hat color.
+
+KEY PATTERN: Lateral thinking problems typically require questioning assumptions, considering alternative interpretations, and creative problem-solving.
+
+---
+CATEGORY: Lateral thinking
+
+PROBLEM: Alex, Ben, and Charles each own a unique color hat among red, blue, and green. They are sitting in a row, one behind the other, where Alex is in front and can't see the others, Ben is in the middle and can see Alex, while Charles is at the end and can see both Alex and Ben. They are told that a total of two hats out of their three are red and the other is blue. They need to guess the color of their own hat, but if they guess, it must be correct as wrong guesses are not allowed. Starting with Charles, none of them can hear the others' answers or know if others have guessed. Charles starts and says he doesn’t know his own hat color. Ben hears this, thinks for a moment, and also says that he doesn’t know his own hat color. Finally, Alex confidently declares the color of his hat. What color is Alex's hat and how did he deduce it?
+
+DECOMPOSITION PLAN:
+  • Step 1: Identify the knowns - Alex, Ben, and Charles each have a unique colored hat (red, blue, green), and there are exactly two red hats and one blue hat.
+  • Step 2: Charles sees both Alex and Ben and states he does not know his hat color. This means he cannot see two blue hats because then he would know his hat is red.
+  • Step 3: Ben, hearing Charles, realizes that since Charles didn't know his hat color, it means neither Alex nor Ben has a blue hat. Therefore, Ben concludes his hat must be red.
+  • Step 4: Alex, knowing there are only two red hats and seeing that Ben's hat is not blue, deduces that his own hat must be blue.
+  • Step 5: Alex confidently states his hat is blue based on the elimination process.
+  • Step 6: The final answer is that Alex's hat is blue.
+
+KEY PATTERN: Lateral thinking problems typically require questioning assumptions, considering alternative interpretations, and creative problem-solving.
+
+---
+CATEGORY: Logical traps
+
+PROBLEM: Alice, Bob, and Charlie are participants in a game show. The host shows them five hats: three red and two blue. Each participant is blindfolded and has one hat placed on their head; the remaining hats are hidden. They can't see their own hat, but they can see the hats of the other two participants. The first to correctly announce the color of their own hat wins a prize. Alice sees that Bob and Charlie have red hats. Bob sees that Alice and Charlie have red hats. Charlie sees that Alice and Bob have red hats. They all deduce logically and do not guess. Alice says she doesn't know the color of her hat. Bob also says he doesn't know the color of his hat. Charlie then announces the color of his hat. What color is Charlie's hat, and what is the logical explanation?
+
+DECOMPOSITION PLAN:
+  • Step 1: Understand the initial conditions and observations
+  • Step 2: Analyze Alice's statement
+  • Step 3: Analyze Bob's statement
+  • Step 4: Deduce Charlie's hat color based on previous statements
+
+KEY PATTERN: Logical traps problems typically require identifying misleading information, separating facts from assumptions, and rigorous logic.
+
+---
+CATEGORY: Logical traps
+
+PROBLEM: You are presented with two doors. One leads to certain escape, while the other leads to an infinite maze of puzzles. Each door is guarded by a sentinel. One sentinel always tells the truth, and the other always lies. You are allowed to ask a single yes-or-no question to just one sentinel to figure out which door leads to escape. What yes-or-no question do you ask to ensure you pick the escape door?
+
+DECOMPOSITION PLAN:
+  • Step 1: Identify the sentinels as A and B, and determine that one always tells the truth and the other always lies
+  • Step 2: Formulate a question that would give the same answer regardless of whether you ask the truth-teller or the liar
+  • Step 3: Ask Sentinel A the following question: 'If I were to ask Sentinel B which door leads to escape, what would they say?'
+  • Step 4: If Sentinel A says Door 1, do not choose Door 1; if Sentinel A says Door 2, choose Door 2
+  • Step 5: Follow the opposite door to the one indicated by Sentinel A's response
+
+KEY PATTERN: Logical traps problems typically require identifying misleading information, separating facts from assumptions, and rigorous logic.
+
+---
+CATEGORY: Logical traps
+
+PROBLEM: A logician is presented with two boxes: Box A and Box B. One box contains a gold coin and the other box contains a silver coin, but the logician does not know which is which. There is a statement written on each box. Box A has a statement reading 'The gold coin is in this box.' Box B has a statement reading 'The gold coin is not in this box.' The logician knows that one statement is true and the other is false. Which box contains the gold coin?
+
+DECOMPOSITION PLAN:
+  • Step 1: Assume the statement on Box A is true
+  • Step 2: Determine the location of the gold coin if Box A's statement is true
+  • Step 3: Check if this assumption leads to a contradiction with the given conditions
+  • Step 4: Since one statement must be true and the other false, conclude that Box A's statement is false
+  • Step 5: Determine the location of the gold coin based on Box B's statement being true
+  • Step 6: Conclude which box contains the gold coin
+
+KEY PATTERN: Logical traps problems typically require identifying misleading information, separating facts from assumptions, and rigorous logic.
+
