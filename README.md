@@ -50,8 +50,8 @@ Member 4 – Future Deployment (Upcoming)	Cloud deployment: Docker, API, Streaml
 Note: Deployment will be added in the future update once backend APIs are fully stable.
 
 🧪 How to Run
-git clone https://github.com/YourRepoName/SaptangAgent-v2.git
-cd SaptangAgent-v2
+git clone https://github.com/Subodhkhanduri/Ethos_ML_Challenge/tree/main
+cd Ethos_ML_Challenge
 pip install -r requirements.txt
 python main.py
 Or run the main.ipynb file directly in Colab for GPU support.
