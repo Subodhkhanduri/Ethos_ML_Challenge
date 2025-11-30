@@ -42,19 +42,19 @@ System performs strongly on well-structured reasoning and arithmetic logic tasks
 
 Team Contributions
 Member	Responsibility
-Member 1 – Planner + Decomposer	Designing problem-decomposition logic, planning system, and plan-trace logging
-Member 2 – Execution + Tools Integration	Connecting solvers (SymPy, PuLP, Z3), execution loop, and tool routing
-Member 3 – Refinement + Validation	Final answer improvement loop, dual-verification cycle, failure recovery
-Member 4 – Future Deployment (Upcoming)	Cloud deployment: Docker, API, Streamlit UI / Web interface
+Kaushiki Singh – Planner + Decomposer	Designing problem-decomposition logic, planning system, and plan-trace logging
+Subodh khanduri – Execution + Tools Integration	Connecting solvers (SymPy, PuLP, Z3), execution loop, and tool routing
+Kaukab Erum – Refinement + Validation	Final answer improvement loop, dual-verification cycle, failure recovery
+Komal kumari – Future Deployment (Upcoming)	Cloud deployment: Docker, API, Streamlit UI / Web interface
 
 Note: Deployment will be added in the future update once backend APIs are fully stable.
 
-🧪 How to Run
-git clone https://github.com/Subodhkhanduri/Ethos_ML_Challenge/tree/main
-cd Ethos_ML_Challenge
-pip install -r requirements.txt
-python main.py
-Or run the main.ipynb file directly in Colab for GPU support.
+How to Run
+-git clone https://github.com/Subodhkhanduri/Ethos_ML_Challenge/tree/main
+-cd Ethos_ML_Challenge
+-pip install -r requirements.txt
+-python main.py
+-Or run the main.ipynb file directly in Colab for GPU support.
 
 Future Scope
 ✔ Scale to 7B–13B parameter LLM
@@ -65,7 +65,7 @@ Future Scope
 
 Note:-
 We are still improving the system’s stability & accuracy.
-Suggestions and feedback are welcome! 😊
+Suggestions and feedback are welcome! 
 
 Acknowledgment:-
 Thanks to Saptang Labs for providing the challenge, datasets, and support.
