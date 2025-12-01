@@ -37,19 +37,13 @@ The system leverages multiple external reasoning and optimization tools:
 SaptangAgent-v2/
 │
 ├── models/           # LoRA adapters (Planner, Executor, Refiner)
-
 ├── tools/            # Calculator, SymPy, PuLP, Z3 integrations
-
 ├── core/             # Main agent orchestration logic
-
 ├── data/
 │   ├── train_math.csv
 │   └── train_procedural.csv
-
 ├── logs/             # Execution logs (traces & reasoning history)
-
 ├── main.ipynb        # Execution pipeline notebook
-
 └── README.md         # You're reading it :)
 
 ## **5. Performance & Results**
