@@ -47,52 +47,24 @@ SaptangAgent-v2/
 ├── main.ipynb        # Execution pipeline notebook
 └── README.md         # You're reading it :)
 
+## **5. Performance & Results**
+
+| **Dataset**    | **Accuracy** | **Avg. Pipeline Time** |
+| -------------- | ------------ | ---------------------- |
+| Math Reasoning | ~61.5%       | 80–120 sec/problem     |
+The system demonstrates strong performance on well-structured mathematical and procedural reasoning tasks.
 
 
-# SaptangAgent-v2 — Multi-Agent Procedural Reasoning System
-Hackathon Project – Saptang Labs Machine Learning Challenge
+## **6. Team Contributions**
 
-Project Overview
+| **Team Member**     | **Responsibility**                                                                             |
+| ------------------- | ---------------------------------------------------------------------------------------------- |
+| **Kaushiki Singh**  | Planner & Decomposer: Designed problem decomposition logic, planning system, and trace logging |
+| **Subodh Khanduri** | Execution & Tool Integration: Integrated SymPy, PuLP, Z3, and built execution loop             |
+| **Kaukab Erum**     | Validation & Refinement: Dual-verification cycles, output refinement, failure recovery         |
+| **Komal Kumari**    | Future Deployment (Upcoming): Dockerization, API backend, Streamlit Web UI                     |
 
-SaptangAgent-v2 is an AI-powered multi-agent system capable of solving logical and mathematical reasoning problems.
-It works using coordinated agents that break down problems into smaller steps, execute solutions using external tools, verify correctness, and refine the final answers.
 
-System Architecture — Multi-Agent Workflow
-Agent	Role
--Planner Agent	Decomposes complex problems into step-by-step plans
--Executor Agent	Executes each step using tools like SymPy, PuLP, Z3, Calculator
--Validator Agent	Verifies if execution results follow the correct logic
--Refiner Agent	Improves final answer if the Validator demands refinements
--Meta-Decider	Routes and controls agent interaction
-
-Tools Used:-
--SymPy Solver
--PuLP Optimizer
--Z3 Constraint Solver
--Math Calculator
--RAG-based Query System
--LoRA-based adapters for role-specific intelligence
-
-Project Structure
-SaptangAgent-v2/
-│
-├── models/           # LORA adapters (Planner, Executor, Refiner)
-├── tools/            # Calculator, SymPy, PuLP, Z3 integrations
-├── core/             # Main agent & orchestration logic
-├── data/
-│   ├── train_math.csv
-│   └── train_procedural.csv
-├── logs/             # Execution logs (traces & reasoning history)
-├── main.ipynb        # Execution pipeline notebook
-└── README.md         # You're reading it :)
-
-Results
-Dataset	Accuracy	Avg Pipeline Time
-Math Reasoning	~61.5%	80–120 sec/problem
-System performs strongly on well-structured reasoning and arithmetic logic tasks.
-
-Team Contributions
-Member	Responsibility
 Kaushiki Singh – Planner + Decomposer	Designing problem-decomposition logic, planning system, and plan-trace logging
 Subodh khanduri – Execution + Tools Integration	Connecting solvers (SymPy, PuLP, Z3), execution loop, and tool routing
 Kaukab Erum – Refinement + Validation	Final answer improvement loop, dual-verification cycle, failure recovery
