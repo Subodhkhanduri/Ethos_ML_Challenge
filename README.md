@@ -1,3 +1,54 @@
+# **SaptangAgent-v2**  
+### *A Multi-Agent Procedural Reasoning System*  
+**Hackathon Project – Saptang Labs Machine Learning Challenge**
+
+---
+
+## **1. Project Overview**
+SaptangAgent-v2 is a modular, AI-powered multi-agent system designed to solve logical, mathematical, and procedural reasoning problems. The system operates through coordinated specialized agents that decompose complex problems, execute solutions using external tools, validate correctness, and refine results to ensure high-quality outputs.
+
+---
+
+## **2. System Architecture**
+SaptangAgent-v2 follows a structured multi-agent workflow with clearly defined roles:
+
+| **Agent**        | **Role Description** |
+|------------------|----------------------|
+| **Planner Agent** | Decomposes complex problems into step-by-step executable plans |
+| **Executor Agent** | Executes individual steps using computational tools |
+| **Validator Agent** | Verifies logical consistency and correctness of outputs |
+| **Refiner Agent** | Improves outputs based on validator feedback |
+| **Meta-Decider** | Controls routing, sequencing, and coordination among agents |
+
+---
+
+## **3. Integrated Tools**
+The system leverages multiple external reasoning and optimization tools:
+- **SymPy Solver**
+- **PuLP Optimizer**
+- **Z3 Constraint Solver**
+- **Mathematical Calculator**
+- **RAG-based Query System**
+- **LoRA-based Adapters** for role-specific intelligence
+
+---
+
+## **4. Project Structure**
+```bash
+SaptangAgent-v2/
+│
+├── models/           # LoRA adapters (Planner, Executor, Refiner)
+├── tools/            # Calculator, SymPy, PuLP, Z3 integrations
+├── core/             # Main agent orchestration logic
+├── data/
+│   ├── train_math.csv
+│   └── train_procedural.csv
+├── logs/             # Execution logs (traces & reasoning history)
+├── main.ipynb        # Execution pipeline notebook
+└── README.md         # You're reading it :)
+
+
+
 # SaptangAgent-v2 — Multi-Agent Procedural Reasoning System
 Hackathon Project – Saptang Labs Machine Learning Challenge
 
