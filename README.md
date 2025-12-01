@@ -34,18 +34,7 @@ The system leverages multiple external reasoning and optimization tools:
 ---
 
 ## **4. Project Structure**
-SaptangAgent-v2/
-│
-├── models/            # LoRA adapters (Planner, Executor, Refiner)
-├── tools/             # Calculator, SymPy, PuLP, Z3 integrations
-├── core/              # Main agent orchestration logic
-├── data/
-│   ├── train_math.csv
-│   └── train_procedural.csv
-├── logs/              # Execution logs (traces & reasoning history)
-├── main.ipynb         # Execution pipeline notebook
-└── README.md          # Project documentation
-
+```bash
 SaptangAgent-v2/
 │
 ├── models/           # LoRA adapters (Planner, Executor, Refiner)
@@ -59,7 +48,6 @@ SaptangAgent-v2/
 └── README.md         # You're reading it :)
 
 ## **5. Performance & Results**
-
 | **Dataset**    | **Accuracy** | **Avg. Pipeline Time** |
 | -------------- | ------------ | ---------------------- |
 | Math Reasoning | ~61.5%       | 80–120 sec/problem     |
