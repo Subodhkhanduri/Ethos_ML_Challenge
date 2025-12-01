@@ -34,7 +34,6 @@ The system leverages multiple external reasoning and optimization tools:
 ---
 
 ## **4. Project Structure**
-```bash
 SaptangAgent-v2/
 │
 ├── models/           # LoRA adapters (Planner, Executor, Refiner)
@@ -64,22 +63,24 @@ The system demonstrates strong performance on well-structured mathematical and p
 | **Kaukab Erum**     | Validation & Refinement: Dual-verification cycles, output refinement, failure recovery         |
 | **Komal Kumari**    | Future Deployment (Upcoming): Dockerization, API backend, Streamlit Web UI                     |
 
-
-Kaushiki Singh – Planner + Decomposer	Designing problem-decomposition logic, planning system, and plan-trace logging
-Subodh khanduri – Execution + Tools Integration	Connecting solvers (SymPy, PuLP, Z3), execution loop, and tool routing
-Kaukab Erum – Refinement + Validation	Final answer improvement loop, dual-verification cycle, failure recovery
-Komal kumari – Future Deployment (Upcoming)	Cloud deployment: Docker, API, Streamlit UI / Web interface
-
 Note: Deployment will be added in the future update once backend APIs are fully stable.
 
-How to Run
--git clone https://github.com/Subodhkhanduri/Ethos_ML_Challenge/tree/main
--cd Ethos_ML_Challenge
+## **7. Installation & Execution**
+
+Step 1: Clone the Repository
+git clone https://github.com/Subodhkhanduri/Ethos_ML_Challenge/tree/main
+
+Step 2: Navigate to the Project Directory
+cd Ethos_ML_Challenge
+
+Step 3: Install Dependencies
 -pip install -r requirements.txt
+
+Step 4: Run the System
 -python main.py
 -Or run the main.ipynb file directly in Colab for GPU support.
 
-Future Scope
+## **8. Future Scope**
 ✔ Scale to 7B–13B parameter LLM
 ✔ Reflexive double-verification for reduced reasoning errors
 ✔ Memory optimization for long-loop reasoning
@@ -90,5 +91,5 @@ Note:-
 We are still improving the system’s stability & accuracy.
 Suggestions and feedback are welcome! 
 
-Acknowledgment:-
+## **Acknowledgment:-**
 Thanks to Saptang Labs for providing the challenge, datasets, and support.
