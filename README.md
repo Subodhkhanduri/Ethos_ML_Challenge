@@ -51,6 +51,7 @@ SaptangAgent-v2/
 | **Dataset**    | **Accuracy** | **Avg. Pipeline Time** |
 | -------------- | ------------ | ---------------------- |
 | Math Reasoning | ~61.5%       | 80–120 sec/problem     |
+
 The system demonstrates strong performance on well-structured mathematical and procedural reasoning tasks.
 
 
@@ -82,7 +83,9 @@ Step 4: Run the System
 
 ## **8. Future Scope**
 ✔ Scale to 7B–13B parameter LLM
+
 ✔ Reflexive double-verification for reduced reasoning errors
+
 ✔ Memory optimization for long-loop reasoning
 ✔ Dynamic tool creation at runtime
 ✔ Web deployment with optimized model serving (by Member-4)
