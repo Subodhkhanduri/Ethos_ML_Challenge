@@ -64,6 +64,11 @@ The system demonstrates strong performance on well-structured mathematical and p
 | **Kaukab Erum**     | Validation & Refinement: Dual-verification cycles, output refinement, failure recovery         |
 | **Komal Kumari**    | Future Deployment (Upcoming): Dockerization, API backend, Streamlit Web UI                     |
 
+Team Member,Responsibility
+Kaushiki Singh,"Planner & Decomposer: Designed problem decomposition logic, planning system, and trace logging"
+Subodh Khanduri,"Execution & Tool Integration: Integrated SymPy, PuLP, Z3, and built execution loop"
+Kaukab Erum,"Validation & Refinement: Dual-verification cycles, output refinement, failure recovery"
+Komal Kumari,"Future Deployment (Upcoming): Dockerization, API backend, Streamlit Web UI"
 Note: Deployment will be added in the future update once backend APIs are fully stable.
 
 ## **7. Installation & Execution**
